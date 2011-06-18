@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+	<table-filter match-schema="public" match-name="account" />
+	<table-filter match-schema="public" match-name="message" />
+	<table-filter match-schema="public" match-name="contact_info" />
+	<table-filter match-schema="public" match-name="link_info" />
+	<table-filter match-schema="public" match-name="convo" />
+	<table-filter match-schema="public" match-name="user" />
+	<table-filter match-schema="public" match-name="ranking" />
+	<table name="account">
+		<primary-key>
+			<!-- setting up a specific id generator for a table -->
+			<generator class="sequence">
+				<param name="sequence">account_id_seq</param>
+			</generator>
+			<key-column name="id" />
+		</primary-key>
+	</table>
+
+	<table name="user">
+		<primary-key>
+			<!-- setting up a specific id generator for a table -->
+			<generator class="sequence">
+				<param name="sequence">user_id_seq</param>
+			</generator>
+			<key-column name="id" />
+		</primary-key>
+	</table>
+
+	<table name="contact_info">
+		<primary-key>
+			<!-- setting up a specific id generator for a table -->
+			<generator class="sequence">
+				<param name="sequence">contact_info_id_seq</param>
+			</generator>
+			<key-column name="id" />
+		</primary-key>
+	</table>
+
+	<table name="link_info">
+		<primary-key>
+			<!-- setting up a specific id generator for a table -->
+			<generator class="sequence">
+				<param name="sequence">link_info_id_seq</param>
+			</generator>
+			<key-column name="id" />
+		</primary-key>
+	</table>
+
+	<table name="convo">
+		<primary-key>
+			<!-- setting up a specific id generator for a table -->
+			<generator class="sequence">
+				<param name="sequence">convo_id_seq</param>
+			</generator>
+			<key-column name="id" />
+		</primary-key>
+	</table>
+	
+	<table name="message">
+		<primary-key>
+			<!-- setting up a specific id generator for a table -->
+			<generator class="sequence">
+				<param name="sequence">message_id_seq</param>
+			</generator>
+			<key-column name="id" />
+		</primary-key>
+	</table>
+	
+	<table name="ranking">
+		<primary-key>
+			<!-- setting up a specific id generator for a table -->
+			<generator class="sequence">
+				<param name="sequence">ranking_id_seq</param>
+			</generator>
+			<key-column name="id" />
+		</primary-key>
+	</table>
+
+</hibernate-reverse-engineering>

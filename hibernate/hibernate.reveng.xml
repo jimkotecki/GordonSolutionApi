@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+ 
+  <table-filter match-name="account"/>
+  <table-filter match-name="account_main_contact_info"/>
+  <table-filter match-name="contact_info"/>
+  <table-filter match-name="user"/>
+
+ <table name="account">
+  <primary-key>
+    <generator class="sequence">
+          <param name="sequence">account_id_seq</param>
+    </generator>
+    <key-column name="id"/>
+</primary-key>
+</table>
+
+ <table name="user">
+  <primary-key>
+    <generator class="sequence">
+          <param name="sequence">user_id_seq</param>
+    </generator>
+    <key-column name="id"/>
+</primary-key>
+</table>
+
+
+ <table name="contact_info">
+  <primary-key>
+    <generator class="sequence">
+          <param name="sequence">contact_info_id_seq</param>
+    </generator>
+    <key-column name="id"/>
+</primary-key>
+</table>
+
+
+</hibernate-reverse-engineering>

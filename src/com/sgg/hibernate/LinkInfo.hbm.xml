@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 17, 2011 6:49:31 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sgg.hibernate.LinkInfo" table="link_info">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="sequence">
+                <param name="sequence">link_info_id_seq</param>
+            </generator>
+        </id>
+        <property name="linkType" type="string">
+            <column name="link_type" length="15" />
+        </property>
+        <property name="miniUrl" type="string">
+            <column name="mini_url" length="75" />
+        </property>
+        <property name="longUrl" type="string">
+            <column name="long_url" length="10000" not-null="true" />
+        </property>
+        <property name="internalUrl" type="string">
+            <column name="internal_url" length="10000" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" length="300" />
+        </property>
+        <property name="userId" type="int">
+            <column name="user_id" not-null="true" />
+        </property>
+        <property name="parentId" type="java.lang.Integer">
+            <column name="parent_id" />
+        </property>
+        <property name="crawl" type="java.lang.Boolean">
+            <column name="crawl" />
+        </property>
+        <property name="lastCrawlDate" type="timestamp">
+            <column name="last_crawl_date" length="35" />
+        </property>
+        <property name="updateDate" type="timestamp">
+            <column name="update_date" length="35" />
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="35" />
+        </property>
+        <property name="active" type="java.lang.Boolean">
+            <column name="active" />
+        </property>
+        <property name="deleted" type="java.lang.Boolean">
+            <column name="deleted" />
+        </property>
+        <property name="deleteDate" type="timestamp">
+            <column name="delete_date" length="35" />
+        </property>
+    </class>
+</hibernate-mapping>

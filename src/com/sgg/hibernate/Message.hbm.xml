@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 17, 2011 6:49:31 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sgg.hibernate.Message" table="message">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="sequence">
+                <param name="sequence">message_id_seq</param>
+            </generator>
+        </id>
+        <property name="message" type="string">
+            <column name="message" length="10000" not-null="true" />
+        </property>
+        <property name="userId" type="int">
+            <column name="user_id" not-null="true" />
+        </property>
+        <property name="convoId" type="java.lang.Integer">
+            <column name="convo_id" />
+        </property>
+        <property name="updateDate" type="timestamp">
+            <column name="update_date" length="35" />
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="35" />
+        </property>
+        <property name="active" type="java.lang.Boolean">
+            <column name="active" />
+        </property>
+        <property name="deleted" type="java.lang.Boolean">
+            <column name="deleted" />
+        </property>
+        <property name="deleteDate" type="timestamp">
+            <column name="delete_date" length="35" />
+        </property>
+    </class>
+</hibernate-mapping>

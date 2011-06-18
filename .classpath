@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="/Users/scottgordon/Workspaces/Resources/hibernate-tools.jar"/>
+	<classpathentry kind="lib" path="/Users/scottgordon/Workspaces/Resources/postgresql-8.4-702.jdbc3.jar"/>
+	<classpathentry kind="lib" path="/Users/scottgordon/Workspaces/Resources/hibernate-distribution-3.5.5-Final/hibernate3.jar"/>
+	<classpathentry kind="lib" path="/Users/scottgordon/Workspaces/Resources/hibernate-distribution-3.5.5-Final/lib/required/antlr-2.7.6.jar"/>
+	<classpathentry kind="lib" path="/Users/scottgordon/Workspaces/Resources/hibernate-distribution-3.5.5-Final/lib/required/commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="/Users/scottgordon/Workspaces/Resources/hibernate-distribution-3.5.5-Final/lib/required/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="/Users/scottgordon/Workspaces/Resources/hibernate-distribution-3.5.5-Final/lib/required/javassist-3.9.0.GA.jar"/>
+	<classpathentry kind="lib" path="/Users/scottgordon/Workspaces/Resources/hibernate-distribution-3.5.5-Final/lib/required/jta-1.1.jar"/>
+	<classpathentry kind="lib" path="/Users/scottgordon/Workspaces/Resources/hibernate-distribution-3.5.5-Final/lib/jpa/hibernate-jpa-2.0-api-1.0.0.Final.jar"/>
+	<classpathentry kind="lib" path="/Users/scottgordon/Workspaces/Resources/slf4j-1.6.1/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="lib" path="/Users/scottgordon/Workspaces/Resources/slf4j-1.6.1/slf4j-simple-1.6.1.jar"/>
+	<classpathentry kind="lib" path="/Users/scottgordon/Workspaces/Resources/google-gson-1.6/gson-1.6.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="/Users/scottgordon/Workspaces/Resources/tagsoup-1.2.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

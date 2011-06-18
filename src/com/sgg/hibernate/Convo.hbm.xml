@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 17, 2011 6:49:31 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sgg.hibernate.Convo" table="convo">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="sequence">
+                <param name="sequence">convo_id_seq</param>
+            </generator>
+        </id>
+        <property name="convoType" type="string">
+            <column name="convo_type" length="15" not-null="true" />
+        </property>
+        <property name="originalLinkId" type="java.lang.Integer">
+            <column name="original_link_id" />
+        </property>
+        <property name="shortDescription" type="string">
+            <column name="short_description" length="75" />
+        </property>
+        <property name="longDescription" type="string">
+            <column name="long_description" length="1000" />
+        </property>
+        <property name="creatorUserId" type="java.lang.Integer">
+            <column name="creator_user_id" />
+        </property>
+        <property name="lastContributedUserId" type="java.lang.Integer">
+            <column name="last_contributed_user_id" />
+        </property>
+        <property name="updateDate" type="timestamp">
+            <column name="update_date" length="35" />
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="35" />
+        </property>
+        <property name="active" type="java.lang.Boolean">
+            <column name="active" />
+        </property>
+        <property name="deleted" type="java.lang.Boolean">
+            <column name="deleted" />
+        </property>
+        <property name="deleteDate" type="timestamp">
+            <column name="delete_date" length="35" />
+        </property>
+    </class>
+</hibernate-mapping>

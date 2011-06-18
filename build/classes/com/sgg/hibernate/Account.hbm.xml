@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 31, 2011 10:12:43 PM by Hibernate Tools 3.2.4.GA -->
+<hibernate-mapping>
+    <class name="com.sgg.hibernate.Account" table="account">
+        <id name="accountId" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="sequence">
+                <param name="sequence">account_id_seq</param>
+            </generator>
+        </id>
+        <property name="accountName" type="string">
+            <column name="account_name" />
+        </property>
+        <property name="accountFirstName" type="string">
+            <column name="account_first_name" length="40" />
+        </property>
+        <property name="accountLastName" type="string">
+            <column name="account_last_name" length="75" />
+        </property>
+        <property name="accountContactInfoId" type="int">
+            <column name="account_contact_info_id" not-null="true" />
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="35" />
+        </property>
+        <property name="updateDate" type="timestamp">
+            <column name="update_date" length="35" />
+        </property>
+        <property name="active" type="java.lang.Boolean">
+            <column name="active" />
+        </property>
+        <property name="deleted" type="java.lang.Boolean">
+            <column name="deleted" />
+        </property>
+        <property name="deleteDate" type="timestamp">
+            <column name="delete_date" length="35" />
+        </property>
+    </class>
+</hibernate-mapping>

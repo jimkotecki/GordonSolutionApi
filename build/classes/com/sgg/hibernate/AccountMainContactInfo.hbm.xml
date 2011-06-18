@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 31, 2011 10:12:43 PM by Hibernate Tools 3.2.4.GA -->
+<hibernate-mapping>
+    <class name="com.sgg.hibernate.AccountMainContactInfo" table="account_main_contact_info">
+        <comment>Grabs the first address, phone number, and e-mail of all accounts</comment>
+        <composite-id name="id" class="com.sgg.hibernate.AccountMainContactInfoId">
+            <key-property name="accountName" type="string">
+                <column name="account_name" />
+            </key-property>
+            <key-property name="accountFirstName" type="string">
+                <column name="account_first_name" length="40" />
+            </key-property>
+            <key-property name="accountLastName" type="string">
+                <column name="account_last_name" length="75" />
+            </key-property>
+            <key-property name="contactInfoLine1" type="string">
+                <column name="contact_info_line1" length="100" />
+            </key-property>
+            <key-property name="contactInfoLine2" type="string">
+                <column name="contact_info_line2" length="100" />
+            </key-property>
+            <key-property name="contactInfoLine3" type="string">
+                <column name="contact_info_line3" length="100" />
+            </key-property>
+            <key-property name="contactInfoCity" type="string">
+                <column name="contact_info_city" length="50" />
+            </key-property>
+            <key-property name="contactInfoState" type="string">
+                <column name="contact_info_state" length="2" />
+            </key-property>
+            <key-property name="contactInfoZip" type="string">
+                <column name="contact_info_zip" length="10" />
+            </key-property>
+            <key-property name="contactInfoDescription" type="string">
+                <column name="contact_info_description" />
+            </key-property>
+            <key-property name="contactInfoPhone" type="string">
+                <column name="contact_info_phone" length="20" />
+            </key-property>
+            <key-property name="contactInfoEmail" type="string">
+                <column name="contact_info_email" length="100" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

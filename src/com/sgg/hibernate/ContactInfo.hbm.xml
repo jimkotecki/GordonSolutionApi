@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 17, 2011 6:49:31 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sgg.hibernate.ContactInfo" table="contact_info">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="sequence">
+                <param name="sequence">contact_info_id_seq</param>
+            </generator>
+        </id>
+        <property name="contactInfoLine1" type="string">
+            <column name="contact_info_line1" length="100" />
+        </property>
+        <property name="contactInfoLine2" type="string">
+            <column name="contact_info_line2" length="100" />
+        </property>
+        <property name="contactInfoLine3" type="string">
+            <column name="contact_info_line3" length="100" />
+        </property>
+        <property name="contactInfoLine4" type="string">
+            <column name="contact_info_line4" length="100" />
+        </property>
+        <property name="contactInfoLine5" type="string">
+            <column name="contact_info_line5" length="100" />
+        </property>
+        <property name="contactInfoCity" type="string">
+            <column name="contact_info_city" length="50" />
+        </property>
+        <property name="contactInfoState" type="string">
+            <column name="contact_info_state" length="2" />
+        </property>
+        <property name="contactInfoZip" type="string">
+            <column name="contact_info_zip" length="10" />
+        </property>
+        <property name="contactInfoDescription" type="string">
+            <column name="contact_info_description" length="25" />
+        </property>
+        <property name="contactInfoPhone" type="string">
+            <column name="contact_info_phone" length="20" />
+        </property>
+        <property name="contactInfoPhone2" type="string">
+            <column name="contact_info_phone2" length="20" />
+        </property>
+        <property name="contactInfoPhone3" type="string">
+            <column name="contact_info_phone3" length="20" />
+        </property>
+        <property name="contactInfoEmail" type="string">
+            <column name="contact_info_email" length="100" />
+        </property>
+        <property name="contactInfoEmail2" type="string">
+            <column name="contact_info_email2" length="100" />
+        </property>
+        <property name="contactInfoSeq" type="int">
+            <column name="contact_info_seq" not-null="true" />
+        </property>
+        <property name="updateDate" type="timestamp">
+            <column name="update_date" length="35" />
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="35" />
+        </property>
+        <property name="active" type="java.lang.Boolean">
+            <column name="active" />
+        </property>
+        <property name="deleted" type="java.lang.Boolean">
+            <column name="deleted" />
+        </property>
+        <property name="deleteDate" type="timestamp">
+            <column name="delete_date" length="35" />
+        </property>
+    </class>
+</hibernate-mapping>
