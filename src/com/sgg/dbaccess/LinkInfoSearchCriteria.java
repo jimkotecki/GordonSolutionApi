@@ -9,6 +9,17 @@ package com.sgg.dbaccess;
  */
 public class LinkInfoSearchCriteria {
 
+	/**
+	 * 
+	 */
+	public LinkInfoSearchCriteria() {
+		super();
+		id = 0;
+		keyword = "";
+		userId = 0;
+		longURL = "";
+	}
+
 	private int id;
 	private String keyword;
 	private int userId;
@@ -60,6 +71,10 @@ public class LinkInfoSearchCriteria {
 	 */
 	public void setLongURL(String longURL) {
 		this.longURL = longURL;
+	}
+	
+	public String toString() {
+		return "ID: " + getId() + " URL: " + getLongURL() + " Keyword: " + getKeyword() + " User: " + getUserId();
 	}
 	
 	

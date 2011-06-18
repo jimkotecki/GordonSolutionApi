@@ -67,18 +67,23 @@ public class LinkInfoAccessImpl implements LinkInfoAccess {
 	@Override
 	public List<LinkInfo> retrieveLinkInfo(LinkInfoSearchCriteria linkSearch) {
 		List<LinkInfo> returnLinkInfo = new ArrayList<LinkInfo>();
+		if(linkSearch == null)
+		{
+			returnLinkInfo = findAllLinkInfo();
+			return returnLinkInfo;
+		}
 		
 		if(linkSearch.getId() > 0) {
 			returnLinkInfo.add(findLinkInfoById(linkSearch.getId()));
-			return returnLinkInfo;
 		}
 		
 		if(linkSearch.getLongURL().length() > 0)
 		{
-			return findLinkInfoByURL(linkSearch.getLongURL());
+			returnLinkInfo.addAll(findLinkInfoByURL(linkSearch.getLongURL()));
 		}
-		
-		return null;
+			
+		return returnLinkInfo;
+
 	}
 	
 	
